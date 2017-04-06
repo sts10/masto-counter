@@ -4,7 +4,7 @@ This is a little one-file Ruby script that gets some stats on the [Mastodon netw
 
 ## Run it yourself
 
-To run it yourself, you'll need to [have Ruby running](https://github.com/tootsuite/mastodon/blob/master/docs/Running-Mastodon/Production-guide.md#rbenv) and then install the `nokogiri` gem, which you can do by running `gem install nokogiri`. Then clone this repo down and run `ruby runner.rb`.
+To run it yourself, you'll need to [have Ruby running](https://github.com/tootsuite/mastodon/blob/master/docs/Running-Mastodon/Production-guide.md#rbenv) and then install the `nokogiri` gem, which you can do by running `gem install nokogiri`. Then clone this repo down and run `ruby counter.rb`.
 
 
 ## Where's the data from? 
