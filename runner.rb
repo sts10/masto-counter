@@ -2,10 +2,10 @@ require 'open-uri'
 require 'nokogiri'
 require 'json'
 
-# url = "https://instances.mastodon.xyz/instances.json"
+url = "https://instances.mastodon.xyz/instances.json"
 
 # Or, if you saved down a local copy...
-url = "instances.json"
+# url = "instances.json"
 
 instance_json = Nokogiri::HTML(open(url))
 puts "got the json"
