@@ -56,13 +56,13 @@ end
 
 puts "Current Mastodon stats!"
 puts ""
-puts "#{format(total_users)} users across #{format(number_of_instances)} instances (#{number_of_up_instances} of which are UP)"
+puts "#{format(total_users)} users across #{format(number_of_instances)} instances (#{number_of_up_instances} are UP)"
 puts ""
 
-puts "Top 15 instances by number of users:"
+puts "Top 15 instances by # of users:"
 instance_array[0..14].each do |instance|
   puts "#{instance['name']} (#{format(instance['users'])})"
 end
 
 puts ""
-puts "(via https://instances.mastodon.xyz/)"
+puts "via https://instances.mastodon.xyz"

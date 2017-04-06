@@ -13,7 +13,7 @@ The data is scraped from [https://instances.mastodon.xyz/](https://instances.mas
 
 ## The numbers of total users and instances seems low? 
 
-This is likely because other scrapers of the instance page don't sufficiently weed out duplicate instances. For example, in [the chart](https://instances.mastodon.xyz/) both "Social.tchncs.de" and "social.tchncs.de" are listed on their own lines, and thus may be counted as distinct instances by others, even though it's just one instance.
+This is likely because other scrapers of the instance page don't sufficiently weed out duplicate instances. For example, previously [this table](https://instances.mastodon.xyz/) both "Social.tchncs.de" and "social.tchncs.de" were listed on their own lines, and thus could have been counted as distinct instances by others, even though it's just one instance. It appears that the duplicated have been removed from the table, but this code still checks for them _just in case_.
 
 ## Show me an example of the output
 
