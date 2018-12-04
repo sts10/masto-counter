@@ -2,14 +2,15 @@ require 'open-uri'
 require 'nokogiri'
 require 'json'
 
-url = "https://instances.mastodon.xyz/instances.json"
+# url = "https://instances.mastodon.xyz/instances.json"
+url = "https://instances.social/list.json"
 
 # Or, if you saved down a local copy...
 # url = "instances.json"
 
 instance_json = Nokogiri::HTML(open(url))
 puts "got the json"
-instance_array = JSON.parse(instance_json)
+instance_array = JSON.parse(instance_json)["instances"]
 puts "parsed the json"
 
 number_of_instances = instance_array.count
@@ -42,12 +43,19 @@ instance_array.each do |instance|
 end
 # sort by number of users
 instance_array.sort_by! do |instance|
-  instance["users"]
+  if instance["users"]
+    instance["users"]
+  else
+    0
+  end
 end.reverse!
 
 total_users = 0
 instance_array.each do |instance|
-  total_users = total_users + instance["users"]
+  if instance["users"]
+    puts "made it here"
+    total_users = total_users + instance["users"]
+  end
 end
 
 def format(n)
